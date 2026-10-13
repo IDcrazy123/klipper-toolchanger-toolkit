@@ -1,0 +1,87 @@
+{
+  "schema_version": 1,
+  "name": "EXAMPLE ONLY - KTC start/prime/end contract, two PLA tools",
+  "reviewed": false,
+  "machine": {
+    "safe_min": [
+      20,
+      20
+    ],
+    "safe_max": [
+      330,
+      300
+    ],
+    "z_min": 0,
+    "z_max": 330,
+    "travel_z": 2,
+    "toolchange_z": 20,
+    "bed_temp": 60,
+    "bed_max_temp": 120,
+    "max_velocity": 300,
+    "max_z_velocity": 15
+  },
+  "start_gcode": [
+    "PRINT_START TOOL=0 TOOL_TEMP=210 BED_TEMP=60 MATERIAL=PLA AUTO_SOAK=1 FULL_BED=1 T0_TEMP=210 T1_TEMP=210"
+  ],
+  "end_gcode": [
+    "PRINT_END"
+  ],
+  "test": {
+    "lines": 51,
+    "patch_length": 20,
+    "gap": 8,
+    "direction": "high-to-low",
+    "print_speed": 20,
+    "travel_speed": 100,
+    "z_speed": 5,
+    "retract_length": 0.6,
+    "retract_speed": 20,
+    "soak_seconds": 0,
+    "temperature_tolerance": 2,
+    "center": null,
+    "define_objects": true,
+    "end_retract_owner": "end_macro",
+    "annotations": false
+  },
+  "tools": [
+    {
+      "id": 0,
+      "extruder": "extruder",
+      "select_gcode": "T0",
+      "nozzle_diameter": 0.4,
+      "filament_diameter": 1.75,
+      "temperature": 210,
+      "min_extrude_temp": 170,
+      "max_temp": 300,
+      "nominal_height": 0.24,
+      "ramp_range": 0.06,
+      "max_volumetric_flow": 8,
+      "max_extrude_only_velocity": 30,
+      "material": "PLA",
+      "initial_retract": 0.6,
+      "temperature_command": "toolchanger"
+    },
+    {
+      "id": 1,
+      "extruder": "extruder1",
+      "select_gcode": "T1",
+      "nozzle_diameter": 0.4,
+      "filament_diameter": 1.75,
+      "temperature": 210,
+      "min_extrude_temp": 170,
+      "max_temp": 300,
+      "nominal_height": 0.24,
+      "ramp_range": 0.06,
+      "max_volumetric_flow": 8,
+      "max_extrude_only_velocity": 30,
+      "material": "PLA",
+      "initial_retract": 1.8,
+      "temperature_command": "toolchanger"
+    }
+  ],
+  "notes": [
+    "Contract example only: change geometry, temperatures and macros for your printer",
+    "initial_retract values assume a matching PRIME_LINES implementation and pickup that does not unretract",
+    "Use oxplow_runtime.cfg 2.1.0 and verify live prerequisites before generating runnable G-code"
+  ]
+}

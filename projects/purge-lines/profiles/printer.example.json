@@ -1,0 +1,12 @@
+{
+  "schema": 1, "reviewed": false, "axis": "y",
+  "purge_area": {"x_min": 10, "x_max": 24, "y_min": 20, "y_max": 280},
+  "line_length": 52, "line_gap": 6, "edge_margin": 2,
+  "passes": 3, "pass_spacing": 3, "prime_z": 0.28, "travel_z": 5,
+  "wipe_distance": 4, "purge_cross_section": 0.6,
+  "print_speed": 10, "travel_speed": 60, "z_speed": 5, "retract_speed": 25,
+  "tools": [
+    {"id": 0, "extruder": "extruder", "select_command": "T0", "nozzle_diameter": 0.4, "filament_diameter": 1.75, "max_cross_section": 0.64, "max_volume_rate": 8, "entry_recovery": 0, "parked_retract": 1.8, "initial_retract": 0.6, "standby_temp": 150},
+    {"id": 2, "extruder": "extruder2", "select_command": "T2", "nozzle_diameter": 0.4, "filament_diameter": 1.75, "max_cross_section": 0.64, "max_volume_rate": 8, "entry_recovery": 0, "parked_retract": 1.8, "initial_retract": 0.6, "standby_temp": 150}
+  ]
+}

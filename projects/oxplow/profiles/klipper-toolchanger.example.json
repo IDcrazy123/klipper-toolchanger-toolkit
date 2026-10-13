@@ -1,0 +1,82 @@
+{
+  "schema_version": 1,
+  "name": "EXAMPLE ONLY - 350mm Klipper toolchanger, PLA, T0-T1",
+  "reviewed": false,
+  "machine": {
+    "safe_min": [
+      20,
+      20
+    ],
+    "safe_max": [
+      330,
+      300
+    ],
+    "z_min": 0,
+    "z_max": 330,
+    "travel_z": 2,
+    "toolchange_z": 20,
+    "bed_temp": 60,
+    "bed_max_temp": 120,
+    "max_velocity": 300,
+    "max_z_velocity": 15
+  },
+  "start_gcode": [
+    "PRINT_START BED_TEMP=60 EXTRUDER_TEMP=210"
+  ],
+  "end_gcode": [
+    "PRINT_END"
+  ],
+  "test": {
+    "lines": 51,
+    "patch_length": 20,
+    "gap": 8,
+    "direction": "high-to-low",
+    "print_speed": 20,
+    "travel_speed": 100,
+    "z_speed": 5,
+    "retract_length": 0.6,
+    "retract_speed": 20,
+    "soak_seconds": 0,
+    "temperature_tolerance": 2,
+    "center": null,
+    "annotations": false
+  },
+  "tools": [
+    {
+      "id": 0,
+      "extruder": "extruder",
+      "select_gcode": "T0",
+      "nozzle_diameter": 0.4,
+      "filament_diameter": 1.75,
+      "temperature": 210,
+      "min_extrude_temp": 170,
+      "max_temp": 300,
+      "nominal_height": 0.24,
+      "ramp_range": 0.06,
+      "max_volumetric_flow": 8,
+      "max_extrude_only_velocity": 30,
+      "material": "PLA"
+    },
+    {
+      "id": 1,
+      "extruder": "extruder1",
+      "select_gcode": "T1",
+      "nozzle_diameter": 0.4,
+      "filament_diameter": 1.75,
+      "temperature": 210,
+      "min_extrude_temp": 170,
+      "max_temp": 300,
+      "nominal_height": 0.24,
+      "ramp_range": 0.06,
+      "max_volumetric_flow": 8,
+      "max_extrude_only_velocity": 30,
+      "material": "PLA"
+    }
+  ],
+  "notes": [
+    "Example values only. Review actual start/end/T macros, bed region and tool offsets.",
+    "Run discover against each user's Moonraker URL rather than assuming this printer.",
+    "Start must home/level/load appropriate mesh and return a safe tool state.",
+    "Tool selection must return an unretracted nozzle; generator retracts at patch exit."
+  ]
+}

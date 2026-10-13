@@ -1,0 +1,12 @@
+__pycache__/
+*.py[cod]
+.venv/
+.env
+*.local.*
+**/private/
+**/archive/
+**/output/
+**/dist/
+**/profiles/*.json
+!**/profiles/*.example.json
+/.upstream-klipper/

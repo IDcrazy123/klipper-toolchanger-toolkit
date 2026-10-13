@@ -1,0 +1,7 @@
+{
+  "schema": 1,
+  "projects": [
+    {"id": "oxplow", "path": "projects/oxplow", "version": "2.3.2", "status": "development-paused", "hardware": "receiving-machine review and physical validation required"},
+    {"id": "purge-lines", "path": "projects/purge-lines", "version": "1.0.0", "status": "experimental", "hardware": "original-macro photographs only; community revision unprinted"}
+  ]
+}
