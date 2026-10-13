@@ -2,10 +2,10 @@
 
 Reusable Klipper tools developed from reviewed personal configurations. Each project has its own version, profile contract, tests, documentation and release ZIP. Receiving machines require their own reviewed configuration; the repository name is not a compatibility promise for every firmware or toolchanger.
 
-| Project | Version | Status | Entry |
+| Project | Version | Status | Download / entry |
 |---|---|---|---|
-| [Oxplow first-layer Z calibration](projects/oxplow/README.md) | 2.3.2 | Development paused; preserved release | `generate_oxplow_gcode.py` |
-| [Toolchanger purge lines](projects/purge-lines/README.md) | 1.0.0 | Experimental community builder | `build_purge.py` |
+| [Oxplow first-layer Z calibration](projects/oxplow/README.md) | 2.3.2 | Development paused; preserved release | [Printables](https://www.printables.com/model/1846885-universal-oxplow-first-layer-z-offset-calibration/files) / `generate_oxplow_gcode.py` |
+| [Toolchanger purge lines](projects/purge-lines/README.md) | 1.0.0 | Experimental community builder | [Printables](https://www.printables.com/model/1875658-toolchanger-purge-lines-for-klipper-configurable-m/files) / `build_purge.py` |
 
 Oxplow makes patch-only ramps, an SVG and a row-to-Z report. Purge Lines makes a reviewed cfg, fixed numeric tool slots, SVG/report and an explicit retract/recovery contract. Neither builder installs files or starts a printer.
 
@@ -20,7 +20,7 @@ python -m pip install -r requirements-dev.txt
 python scripts/run_tests.py
 ```
 
-For four optional upstream Klipper dispatcher tests, set `OXPLOW_KLIPPER_SOURCE` to a checkout containing `gcode.py` and `extras/gcode_macro.py` from the pinned revision in CI. A skipped integration test is not a pass claim.
+For six optional upstream Klipper dispatcher tests (four Oxplow, two Purge), set `OXPLOW_KLIPPER_SOURCE` to a checkout containing `gcode.py` and `extras/gcode_macro.py` from the pinned revision in CI. A skipped integration test is not a pass claim. [CI passed on Python 3.10 and 3.14](https://github.com/IDcrazy123/klipper-toolchanger-toolkit/actions/runs/38401478750) for the initial source release: Oxplow 96 tests and Purge 27, also checked in extracted ZIPs.
 
 ## Repository structure
 

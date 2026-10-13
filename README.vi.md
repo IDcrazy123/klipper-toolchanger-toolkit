@@ -2,6 +2,8 @@
 
 Repository chung cho nhiều bộ mã chia sẻ, mỗi dự án nằm trong `projects/<tên>` và có phiên bản, README, test, tài liệu cùng gói phát hành riêng.
 
+Tải bộ hiện hành: [Oxplow trên Printables](https://www.printables.com/model/1846885-universal-oxplow-first-layer-z-offset-calibration/files), [Purge Lines trên Printables](https://www.printables.com/model/1875658-toolchanger-purge-lines-for-klipper-configurable-m/files). CI của nguồn đầu tiên đã đạt trên Python 3.10 và 3.14; các test cũng chạy lại sau khi giải nén ZIP.
+
 - **Oxplow 2.3.2:** chốt nguồn và tạm dừng phát triển. Chỉ in vùng thử first layer, không chữ/vạch. Dữ liệu máy và các phiên thử cũ vẫn giữ local tại workspace gốc.
 - **Purge Lines 1.0.0:** chuyển ý tưởng từ macro cá nhân thành builder dùng profile, preview và hợp đồng retract. Đây là bản cộng đồng experimental; hai ảnh là kết quả macro gốc, chưa phải xác nhận lần in bản mới.
 

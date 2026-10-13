@@ -13,3 +13,5 @@ There is no blanket license replacing component attribution or provenance.
 Oxplow method attribution: Maxim7745; Printables remix by Công Dương; original header attribution retained. Upstream Klipper/toolchanger source is not distributed in project ZIPs. Dependencies retain their own licenses. Source URLs and snapshots do not grant rights to unrelated upstream files.
 
 [CC BY 4.0 terms](https://creativecommons.org/licenses/by/4.0/).
+
+Publication metadata: the Purge Lines Printables page declares CC BY 4.0 for its uploads. The included MIT license remains an additional code-license declaration; documentation/photos are CC BY 4.0. Record these declarations when mirroring files rather than deleting component notices.
